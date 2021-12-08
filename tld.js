@@ -27,14 +27,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_227 = function() {
+(lib.CachedBmp_273 = function() {
 	this.initialize(ss["tld_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_226 = function() {
+(lib.CachedBmp_272 = function() {
 	this.initialize(ss["tld_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -1626,6 +1626,13 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
+		// Enable touch events while allowing the touch events to bubble up to the document.
+		
+		createjs.Touch.enable(stage, false, true);
+		
+		// Don't let the stage to automatically prevent default touch events.
+		
+		stage.preventSelection = false;
 		this.building.stop()
 		this.building2.stop()
 		this.animCtrl_Btn.txt.text = "Play";
@@ -1665,7 +1672,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_226();
+	this.instance = new lib.CachedBmp_272();
 	this.instance.setTransform(107.35,1.85,0.5,0.5);
 
 	this.instance_1 = new lib.MicrosoftTeamsimage13();
@@ -1691,7 +1698,7 @@ if (reversed == null) { reversed = false; }
 	this.building.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// Layer_5
-	this.instance_2 = new lib.CachedBmp_227();
+	this.instance_2 = new lib.CachedBmp_273();
 	this.instance_2.setTransform(57.85,122.55,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
@@ -1709,7 +1716,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/tld_atlas_1.png?1638948441823", id:"tld_atlas_1"}
+		{src:"images/tld_atlas_1.png?1638957326729", id:"tld_atlas_1"}
 	],
 	preloads: []
 };
